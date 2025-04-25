@@ -1,0 +1,135 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap'); */
+
+body{
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+}
+
+#main{
+    height: 100vh;
+    color: white;
+}
+
+#topbar img{
+    width: 200px;
+    height: auto;
+}
+
+#content h1{
+    font-family: "Outfit", sans-serif;
+    font-size: 60px;
+    line-height: 0.85;
+    margin-bottom: 40px;
+}
+
+#content h1 #first-line{
+    font-weight: 300;
+}
+
+#content h1 #second-line{
+    font-weight: 700;
+}
+
+#content h2{
+    color: rgb(206, 58, 186);
+    font-family: "Inter", sans-serif;
+    font-size: 35px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+#content p{
+    font-family: "Inter", sans-serif;
+    font-size: 16px; 
+    margin-top: 0px;
+    margin-bottom: 30px; 
+}
+
+#content ul{
+    font-family: "Inter", sans-serif;
+    font-size: 16px; 
+    margin-top: 40px;
+    padding-left: 23px;
+}
+
+#leftRight{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#bottom{
+/* NON FUNZIONA
+    font-family: "Inter", sans-serif;
+    font-size: 300px;
+*/
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: "Inter", sans-serif;
+    font-size: 16px; 
+    margin-bottom: 10px;
+}
+
+#checkboxWelcomePage{
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 3px solid white;
+    background-color: transparent;
+    outline: none;            
+    cursor: pointer;
+    margin-right: 10px;
+    position: relative;
+}
+/* Quando la checkbox è selezionata, mostra un segno di spunta */
+#checkboxWelcomePage:checked {
+    background-color: transparent; /* Mantiene lo sfondo trasparente anche quando selezionato */
+}
+/* Pseudo-elemento per creare il "check" (segno di spunta) */
+#checkboxWelcomePage:checked::before {
+    content: '✔';  /* Segno di spunta */
+    position: absolute;
+    color: white;  /* Colore del segno di spunta */
+    font-size: 16px;  /* Dimensione del segno di spunta */
+}
+
+#btnWelcomePage {
+    padding: 10px 35px;           /* Imposta il padding per il bottone */
+    font-size: 16px;              /* Imposta la dimensione del font */
+    font-weight: bold;
+    background-color: #007BFF;    /* Colore di sfondo iniziale (azzurro) */
+    color: white;                 /* Colore del testo */
+    border: none;                 /* Rimuove il bordo predefinito */
+    /*border-radius: 5px;           /* Angoli arrotondati */
+    cursor: pointer;             /* Cambia il cursore quando il mouse è sopra */
+    transition: all 0.3s ease;    /* Transizione fluida per cambiamenti di stile */
+}
+
+/* Effetto hover */
+#btnWelcomePage:hover {
+    background-color: rgb(0, 255, 255);    /* Cambia il colore di sfondo quando hover (azzurro chiaro) */
+    color: black;     
+    box-shadow: 0 0 20px rgb(0, 255, 255); /* Ombra più marcata durante hover */
+    transform: translateY(-2px);  /* Sposta il bottone leggermente verso l'alto per un effetto di sollevamento */
+}
+
+/* Stile quando il bottone è premuto (opzionale) */
+#btnWelcomePage:active {
+    background-color: #00FFFF;    /* Torna al colore originale quando cliccato */
+    color: black;
+    box-shadow: 0 0 20px rgb(0, 255, 255); /* Ombra più leggera quando premuto */
+    transform: translateY(1px);    /* Effetto di "pressione" quando il bottone è cliccato */
+}
+
+#attenzione{
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: rgb(206, 58, 186);
+    margin-top: -25px;
+    padding-left: 35px;
+}

@@ -1,0 +1,43 @@
+body{
+    background-image: url(img/bg.jpg);
+    background-size: cover;
+    margin-left: 6em;
+    margin-right: 6em;
+    margin-top: 3em;
+    margin-bottom: 3em;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    color: white;
+  }
+
+  #topbar img{
+    width: 200px;
+    height: auto;
+  }
+
+  #PuntiRisultato{
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: 20px;
+  }
+
+  #PuntiRisultato #totale{
+    color: #d20094;
+  }
+
+.domanda{
+    margin-bottom: 40px;
+}
+
+  #testoDomanda{
+    font-weight: bold;
+  }
+
+  #rispostaCorretta{
+    font-style: italic;
+  }
+
+  #separatoreDomanda{
+    border: 0.5px dashed white;
+    margin-bottom: 40px;
+  }

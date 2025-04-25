@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page Benchmark - TEAM 1</title>
+    <link rel="stylesheet" href="style1.css">
+    <link rel="icon" type="image/vnd.icon" href="img/faviconEpicode2.png">
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <section id="main">
+
+        <section id="topbar">
+
+            <img src="img/epicode_logo.png" alt="Logo Epicode">
+
+        </section>
+
+        <section id="content">
+            <h1>
+                <span id="first-line">Welcome to</span><br>
+                <span id="second-line">your exam</span>
+            </h1>
+
+            <h2>Instructions</h2>
+
+            <p>We don't expect most engineers to know the answers to all of these <br> questions, so don't worry if you're
+                unsure of a few of them.</p>
+
+            <ul>
+                <li>Each question is <b>timed</b> and can only be <b>answered once</b>.</li>
+                <li>Changing browser tab or opening other windows will <b>invalidate the question</b>.</li>
+                <li>This exam will take approx. <b>0-5 minutes</b>.</li>
+            </ul>
+        </section>
+
+        <section id="bottom">
+            <div id="leftRight">
+                <div>
+                    <input id="checkboxWelcomePage" type="checkbox">
+                </div>
+                <div>
+                    <p>I promise to answer myself without help from anyone</p>
+                </div>
+            </div>
+            <div>
+                <button onclick="controllaCheckbox()" id="btnWelcomePage">PROCEED</button>
+            </div>
+        </section>
+
+        <div>
+            <p id="attenzione"></p>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

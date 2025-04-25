@@ -1,0 +1,167 @@
+body {
+  background-image: url(img/bg.jpg);
+  background-size: cover;
+  margin-left: 6em;
+  margin-right: 6em;
+  margin-top: 3em;
+  margin-bottom: 3em;
+}
+
+#topbar img {
+  width: 200px;
+  height: auto;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
+}
+
+#topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 20px;
+}
+
+#content h1 {
+  font-family: "Outfit", sans-serif;
+  font-size: 50px;
+  font-weight: 300;
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  padding-left: 200px;
+  padding-right: 200px;
+  margin-top: 100px;
+  margin-bottom: 70px;
+}
+
+#risposte {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 40px;
+  margin-left: 400px;
+  margin-right: 400px;
+}
+
+.opzioneRisposta {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*Struttura*/
+  width: 270px;
+  height: 35px;
+  gap: 10px;
+  padding: 12px;
+  margin: 10px 0;
+  cursor: pointer;
+  transition: 0.2s;
+  /*Background*/
+  background-color: rgba(255, 255, 255, 0.167);
+  /*Bordi*/
+  border: 3px solid;
+  border-top-color: white;
+  border-bottom-color: rgba(255, 255, 255, 0.493);
+  border-radius: 50px;
+  /*Font*/
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.opzioneRisposta:hover {
+  background-image: linear-gradient(to bottom, #d20094, #900080);
+}
+
+.opzioneRisposta input[type="radio"] {
+  accent-color: #2a7cf7; /* colore blu epicode-style */
+  width: 20px;
+  height: 20px;
+  display: none;
+}
+
+.opzioneRisposta input[type="radio"]:checked + .testoRisposta {
+  font-weight: bold;
+  color: #2a7cf7;
+}
+
+#contatore {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+
+#NdomandeTotali {
+  color: rgb(206, 58, 186);
+}
+
+/*QUI TUTTA LA STRUTTURA DEL TIMER*/
+
+.timer-container { 
+  position: relative;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* SPAZIO SOPRA il TIMER PER ABBASSARLO RISPETTO AL LOGO */
+}
+
+.timer-svg { /*DISEGNO DEL TIMER*/
+  width: 100%;
+  height: 100%;
+}
+
+.timer-track-bg { /*NON DEVE AVERE UNO SFONDO, DEVE AVERE UN BORDO TRASPARENTE QUASI, DEVE STARE AL CENTRO MA DIETRO AL TESTO*/
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.153);
+  stroke-width: 10;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.timer-progress { /*per segnare l'avanzare cerchio blu, che viene coperto da un trattegio lungo quanto P.Greco, che parte dal centro coprendo in senso orario*/
+  fill: transparent;
+  stroke: #00FFFF;
+  stroke-width: 10;
+  stroke-dasharray: 282.74;
+  transform-origin: center;
+  transform: rotate(-90deg);
+  animation: reduce-clockwise-disappear 60s linear forwards;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+#timer { /*TESTO DEL TIMER*/
+  position: absolute;
+  flex-wrap: wrap;
+  font-size: 0.7em; /* TESTO 0.8EM E NUMERO-CRONOMETRO 1EM*/
+  height: fit-content;
+  font-family: "Inter", sans-serif;
+  font-weight: 200;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: rgba(255, 255, 255, 0.811);
+  text-align: center;
+  line-height: 1.2;
+}
+ /* all'inizio dell'animazione non esiste, alla fine dell'animazione copre tutto il raggio*/
+@keyframes reduce-clockwise-disappear {
+  0% {
+    stroke-dashoffset: 0; /* Inizia, il punto di partenza del raggio completamente visibile */
+    stroke: #00FFFF;
+  }
+  100% {
+    stroke-dashoffset: -282.74; /* IN POSITIVO SI MUOVE ANTIORARIO */
+    stroke: #00FFFF;
+  }
+}

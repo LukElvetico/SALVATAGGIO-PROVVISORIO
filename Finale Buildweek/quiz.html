@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Benchmark - TEAM 1</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="icon" type="image/vnd.icon" href="img/faviconEpicode2.png">
+</head>
+
+<body>
+
+    <!--Questa pagina mostra una sola domanda alla volta.
+Le domande e le risposte vengono inserite dinamicamente mediante JavaScript.
+Non duplicare il blocco delle domande. Gestione avanzamento e logica → JS.-->
+
+    <section id="topbar">
+
+        <div>
+            <img src="img/epicode_logo.png" alt="Logo Epicode">
+        </div>
+
+        <div class="timer-container">
+
+            <svg class="timer-svg" width="100" height="100" viewBox="0 0 100 100">
+                <circle class="timer-track-bg" cx="50" cy="50" r="45" fill="transparent" stroke="#cccccc" stroke-width="10" />
+                <circle class="timer-progress" cx="50" cy="50" r="45" fill="transparent" stroke="#00FFFF" stroke-width="10" stroke-dasharray="282.74" stroke-dashoffset="282.74" transform="rotate(-90deg)" />
+            </svg>
+
+            <div id="timer">
+                <span></span>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="content">
+        <h1 id="domanda">
+            <!-- Inserire con JS il testo della domanda corrente -->
+        </h1>
+        <div id="risposte">
+        </div>
+        <p id="contatore">
+            <span id="questionText">QUESTION&nbsp;</span>
+            <span id="progressioneDomande"></span>
+            <span id="NdomandeTotali">&nbsp;/&nbsp;10</span>
+            <!-- Aggiornare con JS "QUESTION 1/10" -->
+            <!-- Aggiornare con JS "QUESTION 2/10" -->
+            <!-- ecc -->
+        </p>
+    </section>
+
+    <script>
+       window.onload=()=>{caricaDomanda()}
+    </script>
+    <script src="script.js"></script>
+
+
+</body>
+
+</html>
